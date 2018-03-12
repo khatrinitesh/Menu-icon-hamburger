@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hamburger menu</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<a class="icon" href='javascript:void(0)'>
+		<span class="hamburger"></span>
+	</a>
+
+	<script type="text/javascript" src='js/jquery-1.12.0.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".icon").click(function(){
+				$(this).toggleClass('active');
+			});
+		});
+	</script>
+</body>
+</html>

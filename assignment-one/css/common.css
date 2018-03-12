@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+	display: block;
+	position: relative;
+}
+
+.icon{
+	width: 30px;
+	height: 30px;
+	background-color: yellow;
+	display: block;
+	position: relative;
+	cursor:pointer;
+}
+
+.icon .hamburger{
+	width: 100%;
+	height: 3px;
+	background-color: red;
+	display: block;
+	position: relative;
+	top: 0;
+}
+
+.icon .hamburger::before,
+.icon .hamburger::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	background-color: blue;
+	height: 3px;
+	width: 100%;
+	display: block;
+}
+
+.icon .hamburger::before{
+	top: 13px;
+}
+
+.icon .hamburger::after
+{
+	top: 27px;
+}
+
+.icon.active{
+	background-color: transparent;
+}
+
+.icon.active .hamburger{
+	background-color: blue;
+}
+
+.icon.active .hamburger::before{
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 17px 1px;
+	-moz-transform-origin: 17px 1px;
+	-ms-transform-origin: 17px 1px;
+	-o-transform-origin: 17px 1px;
+	transform-origin: 17px 1px;
+	background-color: orange;
+}
+
+.icon.active .hamburger::after{
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: -3px -6px;
+	-moz-transform-origin: -3px -6px;
+	-ms-transform-origin: -3px -6px;
+	-o-transform-origin: -3px -6px;
+	transform-origin: -3px -6px;
+	background-color: green;
+}
